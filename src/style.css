@@ -1,0 +1,138 @@
+:root {
+  /* Paleta de colores principal */
+  --primary-color: #1976D2;      /* Azul principal */
+  --secondary-color: #424242;    /* Gris oscuro */
+  --accent-color: #82B1FF;       /* Azul claro */
+  
+  /* Colores de estado */
+  --success-color: #4CAF50;      /* Verde para estados positivos/aprobados */
+  --warning-color: #FFC107;      /* Amarillo para advertencias */
+  --error-color: #FF5252;        /* Rojo para errores/rechazados */
+  
+  /* Colores de fondo */
+  --background-primary: #FFFFFF;  /* Fondo principal */
+  --background-secondary: #F5F5F5; /* Fondo secundario */
+  --background-elevation: #FAFAFA; /* Fondo elevado (cards) */
+  
+  /* Colores de texto */
+  --text-primary: rgba(0, 0, 0, 0.87);    /* Texto principal */
+  --text-secondary: rgba(0, 0, 0, 0.60);   /* Texto secundario */
+  --text-disabled: rgba(0, 0, 0, 0.38);    /* Texto deshabilitado */
+  
+  /* Variables para KPIs */
+  --kpi-positive: #4CAF50;       /* Indicador positivo */
+  --kpi-neutral: #FFC107;        /* Indicador neutral */
+  --kpi-negative: #FF5252;       /* Indicador negativo */
+  
+  /* Sombras */
+  --shadow-light: 0 2px 4px rgba(0,0,0,0.1);
+  --shadow-medium: 0 4px 8px rgba(0,0,0,0.12);
+  --shadow-heavy: 0 8px 16px rgba(0,0,0,0.14);
+}
+
+/* Estilos base */
+body {
+  margin: 0;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: grey;
+  color: var(--text-primary);
+}
+
+#app {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos para los filtros */
+.filters-section {
+  background-color: var(--background-secondary);
+  padding: 1rem;
+  border-bottom: 1px solid rgba(206, 16, 16, 0.12);
+}
+
+.kpi-title {
+  font-size: 1.5rem; /* Tamaño para el título */
+  font-weight: bold;
+}
+
+.kpi-value {
+  font-size: 2.5rem; /* Tamaño para el valor */
+  font-weight: 800;
+}
+
+.kpi-status {
+  font-size: 1rem; /* Tamaño para el estado */
+  font-weight: 600;
+}
+
+.kpi-icon {
+  font-size: 2rem; /* Tamaño para el ícono */
+}
+
+
+/* Indicadores de tendencia */
+.trend-positive {
+  color: var(--kpi-positive);
+}
+
+.trend-neutral {
+  color: var(--kpi-neutral);
+}
+
+.trend-negative {
+  color: var(--kpi-negative);
+}
+
+/* Estilos para gráficos */
+.chart-container {
+  background-color: var(--background-elevation);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: var(--shadow-light);
+  margin: 1rem 0;
+}
+
+/* Estilos para tablas */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--background-elevation);
+}
+
+.data-table th {
+  background-color: var(--background-secondary);
+  color: var(--text-primary);
+  font-weight: 500;
+  text-align: left;
+  padding: 0.75rem 1rem;
+}
+
+.data-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+/* Utilidades de espaciado */
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 1rem; }
+.mb-4 { margin-bottom: 1.5rem; }
+
+.mt-1 { margin-top: 0.25rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-3 { margin-top: 1rem; }
+.mt-4 { margin-top: 1.5rem; }
+
+/* Media queries para modo oscuro */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-primary: #121212;
+    --background-secondary: #1E1E1E;
+    --background-elevation: #242424;
+    --text-primary: rgba(255, 255, 255, 0.87);
+    --text-secondary: rgba(255, 255, 255, 0.60);
+    --text-disabled: rgba(255, 255, 255, 0.38);
+  }
+}
+
